@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Proyecto Base JSF</title>
+</h:head>
+<h:body>
+    <main>
+        <ui:composition template="WEB-INF/plantillas/home.xhtml">
+            <ui:define name="contenido">
+                <h:form>
+                    <p:panel header="Crear Empleado">
+                        <p:messages/>
+                        <h:panelGrid columns="2" columnClasses="label, value">
+                            <h:outputText value="Cédula: *"/>
+                            <p:inputText value="#{empleadoBean.empleado.id}" required="true" label="Cédula"/>
+
+                            <h:outputText value="Nombre: *"/>
+                            <p:inputText value="#{empleadoBean.empleado.nombre}" required="true" label="Nombre"/>
+
+                            <h:outputText value="Ciudad: *"/>
+                            <p:inputText value="#{empleadoBean.empleado.ciudad}" required="true" label="Ciudad"/>
+
+                            <h:outputText value="Departamento: "/>
+                            <p:inputText value="#{empleadoBean.empleado.departamento}"/>
+
+                            <h:outputText value="Salario: "/>
+                            <p:inputText value="#{empleadoBean.empleado.salario}" required="true" label="Salario"/>
+                        </h:panelGrid>
+                        <h:commandButton value="Guardar" action="#{empleadoBean.guardar}"/>
+                    </p:panel>
+                </h:form>
+            </ui:define>
+        </ui:composition>
+    </main>
+</h:body>
+</html>
