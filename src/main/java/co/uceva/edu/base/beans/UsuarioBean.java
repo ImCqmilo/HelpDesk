@@ -47,11 +47,12 @@ public class UsuarioBean implements Serializable {
     }
 
     public String validar(){
-        System.out.println("Id "+usuario.getId());
         if(usuarioService.validar(usuario)){
             return "listar-empleado.xhtml";
+        }else {
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("El Usuario Ingresado No Existe"));
+            return "index.xhtml";
         }
-        return "crear-usuario.xhtml";
     }
 
 }
