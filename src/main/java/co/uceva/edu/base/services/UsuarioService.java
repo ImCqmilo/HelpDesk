@@ -26,4 +26,14 @@ public class UsuarioService implements IServiceUsuario<Usuario>{
 
     @Override
     public boolean validar(Usuario usuario) { return usuarioRepository.validar(usuario); }
+    public boolean eliminar(Integer id) { return usuarioRepository.eliminar(id); }
+    @Override
+    public boolean actualizar(Usuario usuario) {
+        return usuarioRepository.actualizar(usuario);
+    }
+
+    @Override
+    public boolean comprobar(Usuario usuario) {
+        return usuarioRepository.comprobar(usuario);
+    }
 }

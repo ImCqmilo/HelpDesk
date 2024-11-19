@@ -8,4 +8,7 @@ public interface IServiceUsuario <T>{
 
     boolean guardar(T o);
     boolean validar(T t);
+    boolean eliminar(Integer cedula);
+    boolean actualizar(T o);
+    boolean comprobar(T o);
 }

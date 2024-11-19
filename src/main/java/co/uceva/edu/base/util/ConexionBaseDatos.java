@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConexionBaseDatos {
-    private static String url="jdbc:sqlite:C:\\Users\\camil\\OneDrive\\Documentos\\PWBI2023\\hdominguezv-ejemplojakartaeeprime-2155c38b48c9\\identifier.sqlite";
+    private static String url="jdbc:sqlite:C:/Users/camil/OneDrive/Documentos/HelpDesk/identifier.sqlite";
 
     public static Connection getConnection(){
 

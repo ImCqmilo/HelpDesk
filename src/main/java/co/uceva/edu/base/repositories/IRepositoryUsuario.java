@@ -7,4 +7,9 @@ public interface IRepositoryUsuario<T> {
     T consultar();
     boolean crear(T t);
     boolean validar(T t);
+    boolean eliminar(Integer id);
+
+    boolean actualizar(T t);
+
+    boolean comprobar(T t);
 }
